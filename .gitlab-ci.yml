@@ -23,5 +23,6 @@ stage_deploy:
   script:
     - eval $(ssh-agent)
     - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - mkdir ~/.ssh
     - ssh-keyscan -t rsa www.sgwebdesigns.com >> ~/.ssh/known_hosts
     - scp -P22 -r build/* root@www.sgwebdesigns.com:/tmp
