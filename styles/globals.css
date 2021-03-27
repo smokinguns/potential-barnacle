@@ -1,16 +1,176 @@
-html,
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../node_modules/fontawesome-4.7/css/font-awesome.min.css';
+
+h1,h2,h3,h4,h5 {
+  -webkit-text-decoration: darkturquoise solid underline;
+  text-decoration: darkturquoise solid underline;
+  text-align: center!important;
+}
+
+.main p{ 
+
+ padding-left: 2rem;
+ padding-right: 2rem; 
+ color: #fff  
+}
+
+.top {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+.top a {
+  color: white;
+}
+.top i {
+  color: royalblue;
+  margin-right: .5em;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+.div > img {
+  width: 100%!important;
+}
+.carousel-item > div {
+  width: 100%!important;
+}
+.header{
+  background-color: white;
+  padding: 20px;
+}
+.navbar {
+  background-color: white!important;
+}
+
+.navbar {
+  border-top: none;
+}
+
+.header-image {
+  width: 65%;
+  max-width: 400px;
+}
+a.nav-link{
+  text-transform: uppercase;
+}
+.card {
+  color: #212529;
+}
+
+
+.map-header {
+  background-color: royalblue;
+  padding: 20px;
+  font-size: 1.7em;
+  color: white;
+}
+.card {
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;;
+}
+.card:first-of-type  {
+  margin-top: 0 !important;
+}
+.marker {
+  background-image: url('/public/map-marker.png');
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+
 body {
+  font-size: 1.3em;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: blueviolet;
+  color: #fff;
+}
+.container-xxl .row {
+  margin: 0;
+}
+#getting-started{
+  color: #495057;
+  background-color: #fff;
+  padding: 30px;
+
+
+
+
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+
+h1 {
+  text-align: center!important;
 }
 
-* {
-  box-sizing: border-box;
+.card-text {
+  color: #495057!important;
+}
+
+#getting-started > p {
+  color: #495057;
+}
+#getting-started > h5 {
+  text-align: center;
+  text-decoration: underline;
+}
+.schedule-item {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 5px;
+  margin: 5px;
+}
+
+.schedule-day {
+  padding: 5px;
+  margin: 5px;
+  text-decoration: darkturquoise solid underline;
+}
+
+.footer-list {
+
+  list-style: none;
+  padding: 0;
+}
+.right-button {
+  color: green;
+  background-color: none;
+  border-color: white;
+}
+
+.ink {
+  -webkit-text-decoration: darkturquoise solid underline;
+  text-decoration: darkturquoise solid underline;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip-ink: auto;
+}
+
+.card-title {
+    text-decoration: underline;
+    margin-top: .5rem;
+}
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.embed-responsive .embed-responsive-item, .embed-responsive embed, .embed-responsive iframe, .embed-responsive object, .embed-responsive video {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }

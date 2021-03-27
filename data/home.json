@@ -1,0 +1,22 @@
+{
+    "hero": {
+        "path": "hero.jpg",
+        "alt": "best coach ever",
+        "height": 800,
+        "width": 1200
+    },
+    "carousel": [
+        {
+            "path": "child1.jpg",
+            "height": 708,
+            "width": 1062,
+            "alt": "gym members"
+        },
+        {
+            "path": "child2.jpg",
+            "height": 708,
+            "width": 1062,
+            "alt": "gym members"
+        }
+    ]
+}

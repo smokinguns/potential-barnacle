@@ -1,65 +1,75 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-
-export default function Home() {
+import Carousel from 'react-bootstrap/Carousel';
+import { Layout } from '../components/layout';
+import Image from 'next/image'
+const Home =  (props) => {
+  console.log()
   return (
-    <div className={styles.container}>
+    
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Crossfit 66</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
+      <Layout>
+        <main>
+          <section>
+            <h1>Crossfit 66</h1>
+            <Image
+              
+              src={`/images/${props.data.hero.path}`}
+              alt={props.data.hero.alt}
+              width={props.data.hero.width}
+              height={props.data.hero.height}
+            
+            />
+            <p>Located on Historic Route 66, you will find more than just a gym, you will find a family friendly atmosphere and an opportunity to reach fitness levels you never thought were possible. Our certified coaches will monitor you during the workout to ensure your safety and look for opportunities to help you improve. New to working out, do not worry, we have you covered. Our workouts can be scaled to meet your fitness level, while still providing you room for growth. Still not sure? Come in today and see for yourself. We know you will not be disappointed.</p>
+          </section>
+          <section>
+            <h3>New to Crossfit</h3>
+            <div className="embed-responsive">
+              <iframe className="youtube" src="https://www.youtube.com/embed/mlVrkiCoKkg"></iframe>
+            </div>
+            <p>CrossFit is the perfect application for any committed individual regardless of experience or age. CrossFit leaves behind the traditional notion of long, slow moderate sessions of exercise and replaces it with powerful, short burst, high intensity workouts that will leave people of any fitness level feeling accomplished. The workouts are broad, general and inclusive by design.</p>
+          </section>
+          <section>
+            <Carousel>
+              
+              {
+                  props.data.carousel.map((img, ndx) => {
+                    return (
+                <Carousel.Item key={ndx.toString()}>
+                
+                  <Image
+                   
+                  className="d-block w-100"
+                  src={`/images/${img.path}`}
+                  alt={img.alt}
+                  width={img.width}
+                  height={img.height}
+                />
+                
+              </Carousel.Item>                    
+                    
+                    );
+                  })
+                }
+                 
+            </Carousel>
+          </section>
+        </main>
+      </Layout>
+    </>
   )
 }
+
+export async function getStaticProps(context) {
+  const data = await fetch('http://localhost:3000/api/home').then((res) => res.json());
+
+  return {
+      props: { data }, // will be passed to the page component as props
+  }
+}
+
+export default Home;
+
