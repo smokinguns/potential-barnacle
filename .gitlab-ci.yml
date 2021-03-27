@@ -2,6 +2,7 @@ image: node:latest
 
 stages:
   - build
+  - deploy
 cache:
   paths:
     - node_modules/
@@ -15,6 +16,7 @@ install_dependencies:
     paths:
       - build/
 stage_deploy:
+  stage: deploy
   artifacts:
     paths:
       - build/
