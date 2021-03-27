@@ -21,5 +21,6 @@ stage_deploy:
     paths:
       - build/
   script:
+    - eval $(ssh-agent)
     - ssh-add <(echo "$STAGING_PRIVATE_KEY")
     - scp -P22 -r build/* root@www.sgwebdesigns.com:/tmp
