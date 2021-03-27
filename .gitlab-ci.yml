@@ -13,3 +13,17 @@ install_dependencies:
   artifacts:
     paths:
       - node_modules/
+build_nextjs:
+  stage: build
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+export_nextjs:
+  stage: build
+  script:
+    - npm run export
+  artifacts:
+    paths:
+      - out/
