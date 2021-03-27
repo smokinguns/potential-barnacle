@@ -11,7 +11,13 @@ install_dependencies:
   script:
     - npm install
     - npm run build
-    - npm run export
   artifacts:
     paths:
-      - out/
+      - build/
+stage_deploy:
+  artifacts:
+    paths:
+      - build/
+  script:
+    - ssh-add <(echo "$STAGING_PRIVATE_KEY")
+    - scp -P22 -r build/* root@www.sgwebdesigns.com:/tmp
