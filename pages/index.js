@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Carousel from 'react-bootstrap/Carousel';
 import { Layout } from '../components/layout';
-import Image from 'next/image'
+import { promises as fs } from 'fs'
+import path from 'path'
+
 const Home =  (props) => {
   console.log()
   return (
@@ -15,7 +17,7 @@ const Home =  (props) => {
         <main>
           <section>
             <h1>Crossfit 66</h1>
-            <Image
+            <img
               
               src={`/images/${props.data.hero.path}`}
               alt={props.data.hero.alt}
@@ -40,7 +42,7 @@ const Home =  (props) => {
                     return (
                 <Carousel.Item key={ndx.toString()}>
                 
-                  <Image
+                  <img
                    
                   className="d-block w-100"
                   src={`/images/${img.path}`}
@@ -64,8 +66,10 @@ const Home =  (props) => {
 }
 
 export async function getStaticProps(context) {
-  const data = await fetch('http://localhost:3000/api/home').then((res) => res.json());
 
+  const dataDirectory = path.join(process.cwd(), 'data')
+  const rawData = await  fs.readFile(`${dataDirectory}/home.json`,'utf8');
+  const data = JSON.parse(rawData);
   return {
       props: { data }, // will be passed to the page component as props
   }

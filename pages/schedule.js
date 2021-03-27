@@ -2,6 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import { Layout } from '../components/layout';
 import { Day } from '../components/schedule/day';
+import { promises as fs } from 'fs'
+import path from 'path'
+
 class Schedule extends React.Component {
 
     render() {
@@ -23,8 +26,9 @@ class Schedule extends React.Component {
 }
 
 export async function getStaticProps(context) {
-    const data = await fetch('http://localhost:3000/api/schedule').then((res) => res.json());
-
+    const dataDirectory = path.join(process.cwd(), 'data')
+    const rawData = await fs.readFile(`${dataDirectory}/schedule.json`, 'utf8');
+    const data = JSON.parse(rawData);
     return {
         props: { data }, // will be passed to the page component as props
     }
