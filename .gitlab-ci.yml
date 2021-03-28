@@ -15,14 +15,18 @@ install_dependencies:
   artifacts:
     paths:
       - build/
+      - node_modules/
 stage_deploy:
   stage: deploy
   artifacts:
     paths:
       - build/
+      - node_modules/
   script:
     - eval $(ssh-agent)
     - ssh-add <(echo "$STAGING_PRIVATE_KEY")
     - mkdir ~/.ssh
     - ssh-keyscan -t rsa www.sgwebdesigns.com >> ~/.ssh/known_hosts
     - scp -P22 -r build/* root@www.sgwebdesigns.com:/tmp
+    - scp -P22 -r node_modules/ root@www.sgwebdesigns.com:/tmp
+    
