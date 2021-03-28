@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Layout } from '../components/layout';
 import { promises as fs } from 'fs'
 import path from 'path'
+import Image from 'next/image'
 
 const Home =  (props) => {
   console.log()
@@ -17,7 +18,7 @@ const Home =  (props) => {
         <main>
           <section>
             <h1>Crossfit 66</h1>
-            <img
+            <Image
               
               src={`/images/${props.data.hero.path}`}
               alt={props.data.hero.alt}
@@ -42,7 +43,7 @@ const Home =  (props) => {
                     return (
                 <Carousel.Item key={ndx.toString()}>
                 
-                  <img
+                  <Image
                    
                   className="d-block w-100"
                   src={`/images/${img.path}`}
