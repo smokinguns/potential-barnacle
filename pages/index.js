@@ -3,10 +3,10 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Layout } from '../components/layout';
 import { promises as fs } from 'fs'
 import path from 'path'
-import Image from 'next/image'
+
 
 const Home =  (props) => {
-  console.log()
+
   return (
     
     <>
@@ -18,14 +18,15 @@ const Home =  (props) => {
         <main>
           <section>
             <h1>Crossfit 66</h1>
-            <Image
-              
-              src={`/images/${props.data.hero.path}`}
-              alt={props.data.hero.alt}
-              width={props.data.hero.width}
-              height={props.data.hero.height}
+            <picture>
             
-            />
+             <source srcSet={`/images/large/${props.data.hero.path}`}  media="(min-width: 1200px)" />
+             <source srcSet={`/images/medium/${props.data.hero.path}`}  media="(min-width: 800px)" />
+                <source srcSet={`/images/small/${props.data.hero.path}`}  media="(min-width: 400px)" />
+              <img src={`/images/large/${props.data.hero.path}`} alt={props.data.hero.alt} />
+              
+              
+            </picture>
             <p>Located on Historic Route 66, you will find more than just a gym, you will find a family friendly atmosphere and an opportunity to reach fitness levels you never thought were possible. Our certified coaches will monitor you during the workout to ensure your safety and look for opportunities to help you improve. New to working out, do not worry, we have you covered. Our workouts can be scaled to meet your fitness level, while still providing you room for growth. Still not sure? Come in today and see for yourself. We know you will not be disappointed.</p>
           </section>
           <section>
@@ -43,13 +44,13 @@ const Home =  (props) => {
                     return (
                 <Carousel.Item key={ndx.toString()}>
                 
-                  <Image
-                   
+                  <img
+                   srcSet={`/images/large/${img.path} 1062w, /images/medium/${img.path} 708w, /images/small/${img.path} 354w`}
                   className="d-block w-100"
-                  src={`/images/${img.path}`}
+                  
                   alt={img.alt}
-                  width={img.width}
-                  height={img.height}
+                  width={(img.width)}
+                  height={(img.height)}
                 />
                 
               </Carousel.Item>                    
