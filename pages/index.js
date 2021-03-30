@@ -35,8 +35,8 @@ const Home =  (props) => {
           </section>
           <section>
             <h3>New to Crossfit</h3>
-            <div className="embed-responsive">
-              <iframe className="youtube" src="https://www.youtube.com/embed/mlVrkiCoKkg"></iframe>
+            <div className="embed-responsive embed-responsive-16by9">
+              <iframe className="youtube embed-responsive-item" src="https://www.youtube.com/embed/mlVrkiCoKkg"></iframe>
             </div>
             <p>CrossFit is the perfect application for any committed individual regardless of experience or age. CrossFit leaves behind the traditional notion of long, slow moderate sessions of exercise and replaces it with powerful, short burst, high intensity workouts that will leave people of any fitness level feeling accomplished. The workouts are broad, general and inclusive by design.</p>
           </section>
