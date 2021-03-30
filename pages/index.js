@@ -13,6 +13,10 @@ const Home =  (props) => {
       <Head>
         <title>Crossfit 66</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="CrossFit 66" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="/" />
+        <meta property="og:image" content="/images/gym.jpg" />
       </Head>
       <Layout>
         <main>
