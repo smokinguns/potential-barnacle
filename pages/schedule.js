@@ -13,6 +13,7 @@ class Schedule extends React.Component {
                 <Head>
                     <title>Schedule</title>
                 </Head>
+                <h1>Schedule</h1>
                 <div>
                     {
                         this.props.data.schedule.map((day) => {

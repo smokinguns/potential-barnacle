@@ -11,6 +11,7 @@ const GettingStarted = ()=> {
             <Head>
             <title>Getting Started</title>
             </Head>
+            <h1>Getting Started</h1>
             <img
                 srcSet="/images/large/1R7A9142.jpeg 1400w, /images/medium/1R7A9142.jpeg 800w, /images/small/1R7A9142.jpeg 300w"
               alt="best coach ever"
