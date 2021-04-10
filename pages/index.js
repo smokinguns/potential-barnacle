@@ -11,7 +11,7 @@ const Home =  (props) => {
     
     <>
       <Head>
-        <title>Crossfit 66</title>
+        <title>CrossFit 66</title>
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="CrossFit 66" />
         <meta property="og:type" content="website" />
@@ -21,7 +21,7 @@ const Home =  (props) => {
       <Layout>
         <main>
           <section>
-            <h1>Crossfit 66</h1>
+            <h1>CrossFit 66</h1>
             <picture>
             
              <source srcSet={`/images/large/${props.data.hero.path}`}  media="(min-width: 1200px)" />
@@ -34,7 +34,7 @@ const Home =  (props) => {
             <p>Located on Historic Route 66, you will find more than just a gym, you will find a family friendly atmosphere and an opportunity to reach fitness levels you never thought were possible. Our certified coaches will monitor you during the workout to ensure your safety and look for opportunities to help you improve. New to working out, do not worry, we have you covered. Our workouts can be scaled to meet your fitness level, while still providing you room for growth. Still not sure? Come in today and see for yourself. We know you will not be disappointed.</p>
           </section>
           <section>
-            <h3>New to Crossfit</h3>
+            <h3>New to CrossFit</h3>
             <div className="embed-responsive embed-responsive-16by9">
               <iframe className="youtube embed-responsive-item" src="https://www.youtube.com/embed/mlVrkiCoKkg"></iframe>
             </div>
