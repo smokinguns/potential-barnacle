@@ -5,6 +5,18 @@
         "height": 800,
         "width": 1200
     },
+    "videos": [
+        {
+            "heading": "New to CrossFit",
+            "url": "https://www.youtube.com/embed/mlVrkiCoKkg",
+            "paragraph": "CrossFit is the perfect application for any committed individual regardless of experience or age. CrossFit leaves behind the traditional notion of long, slow moderate sessions of exercise and replaces it with powerful, short burst, high intensity workouts that will leave people of any fitness level feeling accomplished. The workouts are broad, general and inclusive by design."
+        },
+        {
+            "heading": "New Member",
+            "url":"https://www.youtube.com/embed/ABTdTTnnEU8",
+            "paragraph": "hi"
+        }
+    ],
     "carousel": [
         {
             "path": "child1.jpg",

@@ -20,7 +20,7 @@
     "times": [
         { "id": 9, "startTime": "06:00", "type": "WOD" },
         { "id": 10, "startTime": "12:00", "type": "WOD" },
-        { "id": 11, "startTime": "16:00", "endTime": "18:00", "type": "Open Gym" }
+        { "id": 11, "startTime": "16:30", "endTime": "18:30", "type": "Open Gym" }
     ]
 }, {
     "day": "Thursday",
