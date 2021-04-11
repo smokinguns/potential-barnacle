@@ -131,7 +131,7 @@ h1 {
 .schedule-day {
   padding: 5px;
   margin: 5px;
-  text-decoration: darkturquoise solid underline;
+  text-decoration:  underline  solid darkturquoise;
 }
 
 .footer-list {
@@ -146,8 +146,8 @@ h1 {
 }
 
 .ink {
-  -webkit-text-decoration: darkturquoise solid underline;
-  text-decoration: darkturquoise solid underline;
+  -webkit-text-decoration:  underline solid  darkturquoise;
+  text-decoration: underline solid  darkturquoise;
   -webkit-text-decoration-skip: ink;
   text-decoration-skip-ink: auto;
 }
