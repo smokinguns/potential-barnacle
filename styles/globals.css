@@ -2,8 +2,8 @@
 @import '../node_modules/fontawesome-4.7/css/font-awesome.min.css';
 
 h1,h2,h3,h4,h5 {
-  -webkit-text-decoration:  underline solid  darkturquoise;
-  text-decoration: underline solid  darkturquoise;
+  -webkit-text-decoration:  underline solid  darkturquoise  !important;
+  text-decoration: underline solid  darkturquoise  !important;
   text-align: center!important;
 }
 
