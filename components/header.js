@@ -15,7 +15,7 @@ class Header extends React.Component {
 </div>
   <div className="header text-center"><a className="js-scroll-trigger" href="/#page-top">
     <picture>
-        <source src="/images/cf2/.webp" type="image/webp" />
+        <source srcSet="/images/cf2.webp" type="image/webp" />
       <img className="header-image" src="/images/cf2.png" /> </picture> </a> 
   </div> 
 
