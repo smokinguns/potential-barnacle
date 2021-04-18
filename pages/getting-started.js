@@ -17,12 +17,12 @@ const GettingStarted = ()=> {
             
             <source srcSet="/images/large/1R7A9142.webp"  media="(min-width: 1200px)" type="image/webp" />
              <source srcSet="/images/medium/1R7A9142.webp"  media="(min-width: 800px)" type="image/webp"/>
-                <source srcSet="/images/small/1R7A9142.webp" media="(min-width: 400px)" type="image/webp" />
+                <source srcSet="/images/small/1R7A9142.webp" media="(min-width: 300px)" type="image/webp" />
 
 
              <source srcSet="/images/large/1R7A9142.jpeg"  media="(min-width: 1200px)" type="image/jpg" />
              <source srcSet="/images/medium/1R7A9142.jpeg" media="(min-width: 800px)" type="image/jpg"/>
-                <source srcSet="/images/small/1R7A9142.jpeg"  media="(min-width: 400px)" type="image/jpg" />
+                <source srcSet="/images/small/1R7A9142.jpeg"  media="(min-width: 300px)" type="image/jpg" />
               <img src="/images/large/1R7A9142.jpeg" />
               
               
