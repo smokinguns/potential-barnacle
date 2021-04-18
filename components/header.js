@@ -14,8 +14,9 @@ class Header extends React.Component {
  <i className="fa fa-male fa-1x" aria-hidden="true"></i><a href="/getting-started">Drop In</a>
 </div>
   <div className="header text-center"><a className="js-scroll-trigger" href="/#page-top">
-    
-      <img className="header-image" src="/images/cf2.png" /></a> 
+    <picture>
+        <source src="/images/cf2/.webp" type="image/webp" />
+      <img className="header-image" src="/images/cf2.png" /> </picture> </a> 
   </div> 
 
 

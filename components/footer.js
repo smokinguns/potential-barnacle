@@ -23,7 +23,15 @@ const Footer = (props) => {
                     </div>
                     <div className="col-md-4">
                         <div className="textwidget custom-html-widget">
-                            <a href="https://journal.crossfit.com/start.tpl?version=CFJ-graphic300x150" target="_blank" title="CrossFit Journal: The Performance-Based Lifestyle Resource" rel="noopener noreferrer"><img src="https://journal.crossfit.com/templates/images/graphic-300x150.jpg" width="300px" height="150px" alt="CrossFit Journal: The Performance-Based Lifestyle Resource" /></a>
+                            <a href="https://journal.crossfit.com/start.tpl?version=CFJ-graphic300x150" target="_blank" title="CrossFit Journal: The Performance-Based Lifestyle Resource" rel="noopener noreferrer">
+                                
+                                <picture>
+                                    <source src="/images/public/cfmain.webp" type="image/webp" />
+                                <img src="https://journal.crossfit.com/templates/images/graphic-300x150.jpg" width="300px" height="150px" alt="CrossFit Journal: The Performance-Based Lifestyle Resource" />
+                                
+                                </picture>
+                                </a>
+
                         </div>
                     </div>
                 </div>
