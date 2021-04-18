@@ -5,7 +5,8 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import dynamic from 'next/dynamic'
 
-const DynamicVideo = dynamic(() => import('../components/video'))
+const DynamicVideo = dynamic(() => import('../components/video'),
+{ ssr: false })
 
 
 
@@ -67,15 +68,17 @@ const Home =  (props) => {
                   props.data.carousel.map((img, ndx) => {
                     return (
                 <Carousel.Item key={ndx.toString()}>
-                
-                  <img
-                   srcSet={`/images/large/${img.path} 1062w, /images/medium/${img.path} 708w, /images/small/${img.path} 354w`}
-                  className="d-block w-100"
+                <picture className="d-block w-100">
+            
+            <source srcSet={`/images/large/${img.path}`}  media="(min-width: 1200px)" />
+            <source srcSet={`/images/medium/${img.path}`}  media="(min-width: 800px)" />
+               <source srcSet={`/images/small/${img.path}`}  media="(min-width: 400px)" />
+             <img src={`/images/large/${img.path}`} />
+             
+             
+           </picture>
+
                   
-                  alt={img.alt}
-                  width={(img.width)}
-                  height={(img.height)}
-                />
                 
               </Carousel.Item>                    
                     
