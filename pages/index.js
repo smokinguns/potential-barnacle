@@ -3,6 +3,13 @@ import Carousel from 'react-bootstrap/Carousel';
 import { Layout } from '../components/layout';
 import { promises as fs } from 'fs'
 import path from 'path'
+import dynamic from 'next/dynamic'
+
+const DynamicVideo = dynamic(() => import('../components/video'))
+
+
+
+import {Video} from '../components/video';
 
 
 const Home =  (props) => {
@@ -33,15 +40,18 @@ const Home =  (props) => {
             </picture>
             <p>Located on Historic Route 66, you will find more than just a gym, you will find a family friendly atmosphere and an opportunity to reach fitness levels you never thought were possible. Our certified coaches will monitor you during the workout to ensure your safety and look for opportunities to help you improve. New to working out, do not worry, we have you covered. Our workouts can be scaled to meet your fitness level, while still providing you room for growth. Still not sure? Come in today and see for yourself. We know you will not be disappointed.</p>
           </section>
-        
+          
           {
-                  props.data.videos.map((video,idx) => {
+            
+            
+               // on browser
+          
+             props.data.videos.map((video,idx) => {
+                    
                     return (
                       <section key={idx.toString()}>
                       <h3>{video.heading}</h3>
-                      <div className="embed-responsive embed-responsive-16by9">
-                        <iframe className="youtube embed-responsive-item" src={video.url}></iframe>
-                      </div>
+                      <DynamicVideo url={video.url}></DynamicVideo>     
                       <p>{video.paragraph}</p>
                     </section>
 
