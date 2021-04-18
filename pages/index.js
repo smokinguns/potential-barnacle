@@ -34,12 +34,12 @@ const Home =  (props) => {
             
             <source srcSet={`/images/large/${props.data.hero.path.replace("jpg","webp")}`}  media="(min-width: 1200px)" type="image/webp" />
              <source srcSet={`/images/medium/${props.data.hero.path.replace("jpg","webp")}`}  media="(min-width: 800px)" type="image/webp"/>
-                <source srcSet={`/images/small/${props.data.hero.path.replace("jpg","webp")}`}  media="(min-width: 400px)" type="image/webp" />
+                <source srcSet={`/images/small/${props.data.hero.path.replace("jpg","webp")}`}  media="(min-width: 300px)" type="image/webp" />
 
 
              <source srcSet={`/images/large/${props.data.hero.path}`}  media="(min-width: 1200px)" type="image/jpeg" />
              <source srcSet={`/images/medium/${props.data.hero.path}`}  media="(min-width: 800px)" type="image/jpeg"/>
-                <source srcSet={`/images/small/${props.data.hero.path}`}  media="(min-width: 400px)" type="image/jpeg" />
+                <source srcSet={`/images/small/${props.data.hero.path}`}  media="(min-width: 300px)" type="image/jpeg" />
               <img src={`/images/large/${props.data.hero.path}`} alt={props.data.hero.alt} />
               
               
@@ -77,12 +77,12 @@ const Home =  (props) => {
             
                 <source srcSet={`/images/large/${img.path.replace("jpg","webp")}`}  media="(min-width: 1200px)" type="image/webp" />
              <source srcSet={`/images/medium/${img.path.replace("jpg","webp")}`}  media="(min-width: 800px)" type="image/webp"/>
-                <source srcSet={`/images/small/${img.path.replace("jpg","webp")}`}  media="(min-width: 400px)" type="image/webp" />
+                <source srcSet={`/images/small/${img.path.replace("jpg","webp")}`}  media="(min-width: 300px)" type="image/webp" />
 
 
             <source srcSet={`/images/large/${img.path}`}  media="(min-width: 1200px)"  type="imgage/jpeg"/>
             <source srcSet={`/images/medium/${img.path}`}  media="(min-width: 800px)" type="imgage/jpeg" />
-               <source srcSet={`/images/small/${img.path}`}  media="(min-width: 400px)" type="imgage/jpeg" />
+               <source srcSet={`/images/small/${img.path}`}  media="(min-width: 300px)" type="imgage/jpeg" />
              <img src={`/images/large/${img.path}`} />
              
              
