@@ -183,3 +183,9 @@ footer a {
   color: #3898FF!important;
 }
 
+
+#contact-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
