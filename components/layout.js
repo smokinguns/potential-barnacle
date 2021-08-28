@@ -3,9 +3,9 @@ import Head from 'next/head';
 import { Navbar } from './navbar';
 import { Footer } from './footer';
 import {Header} from '../components/header';
-import Accordion from 'react-bootstrap/Accordion';
-import Button from 'react-bootstrap/Button';
 
+import dynamic from 'next/dynamic';
+const DynamicMap = dynamic(() => import('../components/map'))
 import Card from 'react-bootstrap/Card';
 
 class Layout extends React.Component {
@@ -23,36 +23,16 @@ class Layout extends React.Component {
                     {this.props.children}
                 </div>
 
-                <Accordion>
-  <Card>
-    <Card.Header>
-      <Accordion.Toggle as={Button} variant="link" eventKey="0">
-        Click me!
-      </Accordion.Toggle>
-    </Card.Header>
-    <Accordion.Collapse eventKey="0">
-      <Card.Body>Hello! I'm the body</Card.Body>
-    </Accordion.Collapse>
-  </Card>
-  <Card>
-    <Card.Header>
-      <Accordion.Toggle as={Button} variant="link" eventKey="1">
-        Click me!
-      </Accordion.Toggle>
-    </Card.Header>
-    <Accordion.Collapse eventKey="1">
-      <Card.Body>Hello! I'm another body</Card.Body>
-    </Accordion.Collapse>
-  </Card>
-</Accordion>
                 <div id="copyright-bar" className={'copyright navbar-dark bg-dark'}>
 © 2020 SG Web Designs
 </div>
                 <Footer></Footer>
                 <div id="contact-footer">
-                   <span>Call me</span>
+                <a href="tel:+14055141770"> <div className={"fa fa-phone"}> &nbsp;Call Us</div> </a>
+                <a href="sms://+14055141770">   <div className={"fa fa-mobile"}> &nbsp;Text Us</div> </a>
 
                 </div>
+                <DynamicMap></DynamicMap>
             </>)
     }
 }

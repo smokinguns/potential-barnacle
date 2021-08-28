@@ -4,6 +4,10 @@ import { Layout } from '../components/layout';
 import { promises as fs } from 'fs'
 import path from 'path'
 import dynamic from 'next/dynamic'
+import {Schedule} from '../components/schedule/schedule';
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+
 
 const DynamicVideo = dynamic(() => import('../components/video'),
 { ssr: false })
@@ -21,6 +25,7 @@ const Home =  (props) => {
       <Head>
         <title>CrossFit 66</title>
         <link rel="icon" href="/favicon.ico" />
+        <link href="https://api.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css" rel="stylesheet" />
         <meta property="og:title" content="CrossFit 66" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="/" />
@@ -98,6 +103,39 @@ const Home =  (props) => {
                  
             </Carousel>
           </section>
+<section>
+  <h3>Coaches</h3>
+  <CardGroup>
+    {
+  props.data.coaches.map((coach,idx) => {
+                    
+                    return (
+                 
+
+<Card key={idx.toString()}>
+    <Card.Img variant="top" src="https://www.stevensegallery.com/100/100" />
+    <Card.Body>
+      <Card.Title>{coach.name}</Card.Title>
+    </Card.Body>
+  </Card>
+
+
+                     
+
+
+                    );
+
+                  })
+          } 
+</CardGroup>
+</section>
+          <section>
+            <h3>Schedule</h3>
+            <Schedule id="schedule" schedule={props.data.schedule}>
+
+            </Schedule>
+          
+          </section>
         </main>
       </Layout>
     </>
@@ -115,4 +153,3 @@ export async function getStaticProps(context) {
 }
 
 export default Home;
-

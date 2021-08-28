@@ -61,18 +61,17 @@ a.nav-link{
   color: #212529;
 }
 
-
 .map-header {
   background-color: royalblue;
   padding: 20px;
   font-size: 1.7em;
   color: white;
 }
-.card {
+/* .card {
   margin-top: 50px;
   margin-left: 20px;
   margin-right: 20px;;
-}
+} */
 .card:first-of-type  {
   margin-top: 0 !important;
 }
@@ -91,9 +90,20 @@ body {
   margin: 0;
   background-color: #7B1DD3;
   color: #fff;
+  margin-bottom: 95px;
 }
 .container-xxl .row {
   margin: 0;
+}
+
+#map {
+  border-bottom: 1px solid gray;
+}
+
+.map_marker {
+  background-color: purple;
+  color: white;
+  padding: 5px;
 }
 #getting-started{
   color: #495057;
@@ -187,5 +197,19 @@ footer a {
 #contact-footer {
   position: fixed;
   left: 0;
+  background-color: white;
+  padding: 10px;
   bottom: 0;
+  width: 100%;
+  color: purple;
+  min-height: 75px;
+  line-height: 75px;
+  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    z-index: 512121; 
 }

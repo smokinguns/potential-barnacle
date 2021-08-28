@@ -1,12 +1,43 @@
-const Map = () => {
-    return (<>
+import ReactMapGL, {Marker} from 'react-map-gl';
+import { Component } from 'react';
 
-       
-       
+class Map extends Component {
+    state = {
+      viewport: {
+        width: '100vw',
+        height: 150,
+        latitude: 35.5070502,
+        longitude: -97.7355455,
+        zoom: 16
+      }
+    };
+  
+    render() {
+      
+      return (
+          <div id="map">
+        <ReactMapGL 
+        onViewportChange={(viewport) => this.setState({ viewport })}
+        {...this.state.viewport}
 
-    </>);
-}
+          mapStyle="mapbox://styles/mapbox/streets-v9"
+          mapboxApiAccessToken="pk.eyJ1Ijoic21va2luZ3VucyIsImEiOiJja2YxeGs4NnMwdnZ6MnJsM2dwZnA3NmFvIn0.suyc8pqbVM_JcWM8Ebu7Wg"
+          
+        >
+       <Marker className="map_marker"
+        key={"marker"}
+        longitude = {-97.7355455}
+        
+        latitude = {35.5070502}
+        >
+          <div>CrossFit 66</div>
+       </Marker>
 
+        </ReactMapGL>
+        </div>
+      );
+    }
+  }
 
 /*
  <script>
@@ -29,3 +60,4 @@ var marker = new mapboxgl.Marker()
 .addTo(map);
 </script>
 */
+export default Map;

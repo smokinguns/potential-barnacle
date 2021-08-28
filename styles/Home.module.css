@@ -29,6 +29,11 @@
   margin-left: 0.5rem;
 }
 
+
+
+.coach{
+  max-width: 200px;
+}
 .footer a {
   display: flex;
   justify-content: center;

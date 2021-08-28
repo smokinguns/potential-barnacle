@@ -13,6 +13,57 @@
         }
    
     ],
+
+    "coaches": [
+        {"id":1, "name": "Kristie Sproul", "photo":""},
+        {"id": 2, "name": "Wes Gellepsie", "photo":""},
+        {"id": 3, "name": "Shad Flores", "photo":""}
+    ],
+    "schedule": [{
+        "day": "Monday",
+        "times": [
+            { "id": 1, "startTime": "06:00", "type": "WOD" },
+            { "id": 2, "startTime": "12:00", "type": "WOD" },
+            { "id": 3, "startTime": "16:15", "type": "WOD" },
+            { "id": 4, "startTime": "17:30", "type": "WOD" }
+        ]
+    },
+    {
+        "day": "Tuesday",
+        "times": [
+            { "id": 5, "startTime": "06:00", "type": "WOD" },
+            { "id": 7, "startTime": "16:15", "type": "WOD" },
+            { "id": 8, "startTime": "17:30", "type": "WOD" }
+        ]
+    }, {
+        "day": "Wednesday",
+        "times": [
+            { "id": 9, "startTime": "06:00", "type": "WOD" },
+            { "id": 10, "startTime": "12:00", "type": "WOD" },
+            { "id": 11, "startTime": "16:30", "endTime": "18:30", "type": "Open Gym" }
+        ]
+    }, {
+        "day": "Thursday",
+        "times": [
+            { "id": 12, "startTime": "06:00", "type": "WOD" },
+            { "id": 13, "startTime": "12:00", "type": "WOD" },
+            { "id": 14, "startTime": "16:15", "type": "WOD" },
+            { "id": 15, "startTime": "17:30", "type": "WOD" }
+        ]
+    }, {
+        "day": "Friday",
+        "times": [
+            { "id": 16, "startTime": "06:00", "type": "WOD" },
+            { "id": 17, "startTime": "12:00", "type": "WOD" },
+            { "id": 18, "startTime": "16:00", "endTime": "18:00", "type": "Open Gym" }
+        ]
+    }, {
+        "day": "Saturday",
+        "times": [
+            { "id": 19, "startTime": "09:00", "type": "WOD" }
+        ]
+    }],
+    
     "carousel": [
         {
             "path": "child1.jpg",

@@ -11,7 +11,7 @@ install_dependencies:
   stage: build
   script:
     - npm install
-    - npm run build
+    - npm run export
   artifacts:
     paths:
       - .next/

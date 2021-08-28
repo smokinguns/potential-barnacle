@@ -19,6 +19,8 @@
     "nodemailer": "^6.5.0",
     "react": "17.0.1",
     "react-bootstrap": "^1.5.2",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-map-gl": "^6.1.16",
+    "react-photo-gallery": "^8.0.0"
   }
 }

@@ -12,13 +12,7 @@ const Footer = (props) => {
                     </div>
                     <div className="col-md-4">
                         <ul className="footer-list">
-                            <li><a href="/privacypolicy">PRIVACY POLICY</a></li>
                             <li><a href="/copyright-notice">COPYRIGHT NOTICE </a> </li>
-                            <li><a href="/terms-of-service-conditions-of-use">TERMS OF SERVICE &amp; CONDITIONS OF USE </a></li>
-                            <li><a href="/federal-trade-commission-compliance">FEDERAL TRADE COMMISSION COMPLIANCE</a></li>
-                            <li><a href="/dmca-compliance"> DMCA COMPLIANCE</a> </li>
-                            <li> <a href="/disclaimer"> DISCLAIMER </a></li>
-                            <li> <a href="/anti-spam-policy"> ANTI-SPAM POLICY</a> </li>
                         </ul>
                     </div>
                     <div className="col-md-4">
