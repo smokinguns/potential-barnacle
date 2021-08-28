@@ -30,6 +30,7 @@ stage_deploy:
     - ssh-add <(echo "$STAGING_PRIVATE_KEY")
     - mkdir ~/.ssh
     - ssh-keyscan -t rsa www.sgwebdesigns.com >> ~/.ssh/known_hosts
-    - scp -P22 -r out/* root@www.sgwebdesigns.com:/var/www/crossfit66
-
+    - scp -P22 -r .next root@www.sgwebdesigns.com:/var/www/crossfit66
+    - scp -P22 -r node_modules root@www.sgwebdesigns.com:/var/www/crossfit66
+    - scp -P22 -r public root@www.sgwebdesigns.com:/var/www/crossfit66
     
