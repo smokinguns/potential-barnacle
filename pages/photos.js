@@ -41,7 +41,7 @@ class Photos extends React.Component {
     <h1>Photos</h1>
     
         </header>
-        <Gallery photos={photos} />;
+        <Gallery photos={photos} />
     </article>
     
     
