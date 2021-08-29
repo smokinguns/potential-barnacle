@@ -15,9 +15,18 @@
     ],
 
     "coaches": [
-        {"id":1, "name": "Kristie Sproul", "photo":""},
-        {"id": 2, "name": "Wes Gellepsie", "photo":""},
-        {"id": 3, "name": "Shad Flores", "photo":""}
+        {"id":1, "name": "Kristie Sproul", "photo":"kristie.jpg", "certs": [
+            "CFL-2",
+            "USAW-1"
+        ]} ,
+        {"id": 2, "name": "Wes Gellepsie", "photo":"wes.jpg", "certs": [
+            "CFL-1"
+           
+        ]},
+        {"id": 3, "name": "Shad Flores", "photo":"shad.jpg", "certs": [
+            "CFL-1"
+         
+        ]}
     ],
     "schedule": [{
         "day": "Monday",

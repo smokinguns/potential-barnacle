@@ -3,7 +3,6 @@ import Head from 'next/head';
 import { Navbar } from './navbar';
 import { Footer } from './footer';
 import {Header} from '../components/header';
-
 import dynamic from 'next/dynamic';
 const DynamicMap = dynamic(() => import('../components/map'))
 import Card from 'react-bootstrap/Card';

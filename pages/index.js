@@ -113,9 +113,14 @@ const Home =  (props) => {
                  
 
 <Card key={idx.toString()}>
-    <Card.Img variant="top" src="https://www.stevensegallery.com/100/100" />
+    <Card.Img variant="top" src={`/images/${coach.photo}`} />
     <Card.Body>
       <Card.Title>{coach.name}</Card.Title>
+      {
+        coach.certs.map((cert) =>{
+          return ( <div>{cert}</div> );
+        })
+      }
     </Card.Body>
   </Card>
 
