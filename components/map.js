@@ -30,7 +30,7 @@ class Map extends Component {
         
         latitude = {35.5070502}
         >
-          <div><a href="maps://?q=-97.7355455,35.5070502"> CrossFit 66</a></div>
+          <div><a href="https://www.google.com/maps/search/?api=1&query=CrossFit+66/@35.5070273,-97.7344516"> CrossFit 66</a></div>
        </Marker>
 
         </ReactMapGL>
