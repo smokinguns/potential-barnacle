@@ -213,3 +213,7 @@ footer a {
     align-content: center;
     z-index: 512121; 
 }
+
+.coaches-img {
+  max-width: 50%;
+}

@@ -118,7 +118,7 @@ const Home =  (props) => {
       <Card.Title>{coach.name}</Card.Title>
       {
         coach.certs.map((cert) =>{
-          return ( <div>{cert}</div> );
+          return ( <div key={idx.toString()}>{cert}</div> );
         })
       }
     </Card.Body>

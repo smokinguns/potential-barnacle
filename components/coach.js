@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card'
 
 const Coach = ({coach}) => {
     return (<Card>
-    <Card.Img variant="top" src="https://www.stevensegallery.com/800/400" />
+    <Card.Img variant="top" className={'coaches-img'} src={`/images/${coach.photo}`} />
     <Card.Body>
       <Card.Title>{coach.name}</Card.Title>
       <h6>
