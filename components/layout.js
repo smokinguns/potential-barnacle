@@ -27,8 +27,8 @@ class Layout extends React.Component {
 </div>
                 <Footer></Footer>
                 <div id="contact-footer">
-                <a href="tel:+14055141770"> <div className={"fa fa-phone"}> &nbsp;Call Us</div> </a>
-                <a href="sms://+14055141770">   <div className={"fa fa-mobile"}> &nbsp;Text Us</div> </a>
+                <a href="tel:+14055146565"> <div className={"fa fa-phone"}> &nbsp;Call Us</div> </a>
+                <a href="sms://+14055146565">   <div className={"fa fa-mobile"}> &nbsp;Text Us</div> </a>
 
                 </div>
                 <DynamicMap></DynamicMap>

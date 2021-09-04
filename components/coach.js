@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card'
 
 
 const Coach = ({coach}) => {
-    return (<Card>
+    return (<Card id={`coach-id-${coach.id}`}>
     <Card.Img variant="top" className={'coaches-img'} src={`/images/${coach.photo}`} />
     <Card.Body>
       <Card.Title>{coach.name}</Card.Title>

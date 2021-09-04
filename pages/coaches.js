@@ -3,11 +3,24 @@ import Head from 'next/head';
 import {Layout} from '../components/layout';
 import {Coach} from '../components/coach';
 import { promises as fs } from 'fs'
-import path from 'path'
+import path from 'path';
+
+import {useRouter} from "next/router";
+
 class Coaches extends React.Component {
     
-
+    
     render(){
+      
+        if (typeof window !== 'undefined') {
+            if(window.location.search.indexOf("coach=")){
+               const coach =  window.location.search.substr(1).split('=')[1];
+               const div = document.getElementById(`coach-id-${coach}`);
+               div.scrollIntoView();
+
+            }
+            
+        }
         
         return (<>
            

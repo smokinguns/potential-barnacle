@@ -116,11 +116,13 @@ const Home =  (props) => {
     <Card.Img variant="top" src={`/images/${coach.photo}`} />
     <Card.Body>
       <Card.Title>{coach.name}</Card.Title>
+      <a  href={`/coaches?coach=${coach.id}`}>BIO</a>
       {
         coach.certs.map((cert) =>{
           return ( <div key={idx.toString()}>{cert}</div> );
         })
       }
+      
     </Card.Body>
   </Card>
 
