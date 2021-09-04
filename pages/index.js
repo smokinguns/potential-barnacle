@@ -60,7 +60,7 @@ const Home =  (props) => {
              props.data.videos.map((video,idx) => {
                     
                     return (
-                      <section key={idx.toString()}>
+                      <section key={video-`${idx.toString()}`}>
                       <h3>{video.heading}</h3>
                       <DynamicVideo url={video.url}></DynamicVideo>     
                       <p>{video.paragraph}</p>
@@ -77,7 +77,7 @@ const Home =  (props) => {
               {
                   props.data.carousel.map((img, ndx) => {
                     return (
-                <Carousel.Item key={ndx.toString()}>
+                <Carousel.Item key={`carousel-${ndx.toString()}`}>
                 <picture className="d-block w-100">
             
                 <source srcSet={`/images/large/${img.path.replace("jpg","webp")}`}  media="(min-width: 1200px)" type="image/webp" />
@@ -112,7 +112,7 @@ const Home =  (props) => {
                     return (
                  
 
-<Card key={idx.toString()}>
+<Card key={`coach-${idx.toString()}`}>
     <Card.Img variant="top" src={`/images/${coach.photo}`} />
     <Card.Body>
       <Card.Title>{coach.name}</Card.Title>
