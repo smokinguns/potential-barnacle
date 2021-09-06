@@ -13,7 +13,7 @@ class Coaches extends React.Component {
     render(){
       
         if (typeof window !== 'undefined') {
-            if(window.location.search.indexOf("coach=")){
+            if(window.location.search.indexOf("coach=") >= 0){
                const coach =  window.location.search.substr(1).split('=')[1];
                const div = document.getElementById(`coach-id-${coach}`);
                div.scrollIntoView();
