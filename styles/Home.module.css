@@ -96,6 +96,14 @@
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
 }
+img {
+  width: 100%;
+  height: auto;
+}
+
+.div > img {
+  width: 100%!important;
+}
 
 .card:hover,
 .card:focus,

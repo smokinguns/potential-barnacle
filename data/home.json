@@ -26,7 +26,16 @@
         {"id": 3, "name": "Shad Flores", "photo":"shad.jpg", "certs": [
             "CFL-1"
          
-        ]}
+        ]},
+        {
+            "id":"4",
+            "name": "Drew Behrens",
+            
+            "certs": [
+                "CFL-1"
+            ],
+            "photo" : "drew.jpg"
+        }
     ],
     "schedule": [{
         "day": "Monday",

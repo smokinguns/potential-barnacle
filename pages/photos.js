@@ -6,15 +6,55 @@ import Gallery from 'react-photo-gallery';
 
 const photos = [
   {
-    src: 'https://via.placeholder.com/468x60',
+    src: '/images/1.jpg',
     width: 4,
     height: 3
   },
   {
-    src: 'https://via.placeholder.com/468x60',
+    src: '/images/2.jpg',
     width: 1,
     height: 1
-  }
+  },
+  {
+    src: '/images/3.jpg',
+    width: 4,
+    height: 3
+  },
+  {
+    src: '/images/11.jpg',
+    width: 1,
+    height: 1
+  },
+  {
+    src: '/images/20.jpg',
+    width: 2,
+    height: 2
+  },
+  {
+    src: '/images/14.jpg',
+    width: 4,
+    height: 3
+  },
+  {
+    src: '/images/15.jpg',
+    width: 1,
+    height: 1
+  },
+  {
+    src: '/images/16.jpg',
+    width: 2,
+    height: 2
+  },
+  {
+    src: '/images/17.jpg',
+    width: 1,
+    height: 1
+  },
+  {
+    src: '/images/9.jpg',
+    width: 4,
+    height: 3
+  },
 ];
 
 
